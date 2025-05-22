@@ -1,0 +1,150 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #b8ceee;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  background: #121111;
+  padding: 30px 40px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 480px;
+  height: 100%;
+}
+
+
+h1 {
+  text-align: center;
+  margin-bottom: 24px;
+  color: #fbf8f8;
+  font-size: 2rem;
+}
+
+
+.task-input {
+  display: flex;
+  gap: 50px;
+  margin-bottom: 20px;
+  font-size: larger;
+}
+
+.task-input input {
+  flex: 1;
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.task-input button {
+  background-color: #4f46e5;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.task-input button:hover {
+  background-color: #4338ca;
+}
+
+/* Filter buttons */
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.filters button {
+  padding: 8px 14px;
+  background-color: #131415;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+  color: white;
+}
+
+.filters button:hover {
+  background-color: #cbd5e1;
+}
+
+
+.task-list {
+  list-style: none;
+  margin-top: 10px;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px;
+  background-color: #f9fafb;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.task-item label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  word-break: break-word;
+}
+
+.task-item input[type="checkbox"] {
+  transform: scale(1.2);
+}
+
+.task-item.completed label {
+  text-decoration: line-through;
+  color: #999;
+}
+
+.task-item button {
+  background-color: #ef4444;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.task-item button:hover {
+  background-color: #dc2626;
+}
+
+
+@media (max-width: 600px) {
+  .task-input {
+    flex-direction: column;
+  }
+
+  .task-input input,
+  .task-input button {
+    width: 100%;
+  }
+
+  .filters {
+    flex-direction: column;
+  }
+}
